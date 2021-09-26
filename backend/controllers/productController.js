@@ -9,7 +9,7 @@ const getProducts = asyncHandler(async (req, res) => {
 
   // Test Error
   // res.status(401)
-  // throw new Error('Not Authorized!')
+  // throw new Error('Test Error')
 
   res.json(products)
 })
