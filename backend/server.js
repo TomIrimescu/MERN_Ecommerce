@@ -21,8 +21,13 @@ app.get('/', (req, res) => {
 
 app.use((req, res, next) => {
   // res.setHeader('Access-Control-Allow-Origin', 'https://mern-e-commerce-5em9p.ondigitalocean.app')
-  res.setHeader('Access-Control-Allow-Origin', 'https://shop.irimescu.com')
-  res.setHeader('Access-Control-Allow-Origin', 'https://www.shop.irimescu.com')
+  // res.setHeader('Access-Control-Allow-Origin', 'https://shop.irimescu.com')
+  // res.setHeader('Access-Control-Allow-Origin', 'https://www.shop.irimescu.com')
+  var allowedDomains = ['https://shop.irimescu.com', 'https://www.shop.irimescu.com'];
+  var origin = req.headers.origin;
+  if (allowedDomains.indexOf(origin) > -1) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type')
   res.setHeader('Access-Control-Allow-Credentials', true)
