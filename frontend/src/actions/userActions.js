@@ -20,6 +20,7 @@ export const login = (email, password) => async (dispatch) => {
 
     const { data } = await axios.post(
       'https://mern-e-commerce-api-sxv2z.ondigitalocean.app/api/users/login',
+      // '/api/users/login',
       { email, password },
       config
     )
