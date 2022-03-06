@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "proxy": "https://mern-e-commerce-api-sxv2z.ondigitalocean.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
